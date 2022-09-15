@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sisto||official</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  <style>
+    /* .topnav {
+      overflow: hidden;
+      background-color: #333;
+    } */
+
+    /* .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    } */
+
+    /* .active {
+      background-color: #04AA6D;
+      color: white;
+    } */
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: black;
+      padding: 20px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #555;
+      color: white;
+    }
+
+    /* .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
+    } */
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .topnav a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .topnav.responsive .dropdown {
+        float: none;
+      }
+
+      .topnav.responsive .dropdown-content {
+        position: relative;
+      }
+
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 17%;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 19px 25px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: chocolate;
+      color: white;
+    }
+
+    .topnav a.active {
+      background-color: black;
+      color: white;
+    }
+
+    /* .container {
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card {
+      height: 280px;
+      max-width: 350px;
+      margin: 0 20px;
+      background: white;
+      transition: 0.4s;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      height: 470px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card .img {
+      height: 200px;
+      width: 100%;
+    }
+
+    .card .img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card .top-text {
+      padding: 5px;
+    }
+
+    .card .top-text .name {
+      font-size: 25px;
+      font-weight: 600;
+      color: #202020;
+    }
+
+    .card .top-text p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    .card .bottom-text {
+      padding: 0 20px 10px 20px;
+      margin-top: 5px;
+      background: white;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.1s;
+    }
+
+    .card:hover .bottom-text {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .card .bottom-text .text {
+      text-align: justify;
+    }
+
+    .card .bottom-text .btn {
+      margin: 10px 0;
+      text-align: left;
+    }
+
+    .card .bottom-text .btn1 a {
+      text-decoration: none;
+      background: chocolate;
+      color: #f2f2f2;
+      padding: 5px 8px;
+      border-radius: 3px;
+      display: inline-flex;
+      transition: 0.2s;
+    }
+
+    .card .bottom-text .btn1 a:hover {
+      transform: scale(0.9);
+    }
+
+    @media screen and (max-width: 978px) {
+      .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+
+      .card {
+        max-width: 700px;
+        margin: 20px 0;
+      }
+    } */
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: chocolate;
+      color: black;
+    }
+
+    #about {
+      top: 20px;
+      background-color: #04AA6D;
+    }
+
+    #blog {
+      top: 80px;
+      background-color: #2196F3;
+    }
+
+    #projects {
+      top: 140px;
+      background-color: #f44336;
+    }
+
+    #contact {
+      top: 200px;
+      background-color: #555
+    }
+
+    /* .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4%;
+      background-color: chocolate;
+      color: white;
+      text-align: center;
+    } */
+
+    footer {
+      background: black;
+      height: auto;
+      width: 100vw;
+      font-family: "open Sans";
+      padding-top: 40px;
+      color: #fff;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-content h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 3rem;
+    }
+
+    .footer-content p {
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 14px;
+    }
+
+    .socials {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+    }
+
+    .socials li {
+      margin: 0 10px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .socials a i {
+      font-size: 20px;
+      transition: color .4s ease;
+    }
+
+    .socials a:hover i {
+      color: tomato;
+    }
+
+    .footer-bottom {
+      background: black;
+      width: 100vw;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .main {
+      text-align: center;
+      background-color: #112B3C;
+      /* border-radius: 40px; */
+      border: 4px solid black;
+      /* padding: 5px; */
+      margin-top: 105px;
+      color: white;
+    }
+
+    .icon-bar {
+      position: fixed;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .icon-bar a {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 20px;
+    }
+
+    .icon-bar .facebook:hover {
+      background-color: blue;
+    }
+
+    .icon-bar .twitter:hover {
+      background-color: skyblue;
+    }
+
+    .icon-bar .google:hover {
+      background-color: red;
+    }
+
+    .icon-bar .linkedin:hover {
+      background-color: blue;
+    }
+
+    .icon-bar .youtube:hover {
+      background-color: red;
+    }
+
+    .facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .google {
+      background: #dd4b39;
+      color: white;
+    }
+
+    .linkedin {
+      background: #007bb5;
+    }
+
+    .youtube {
+      background: #bb0000;
+      color: white;
+    }
+
+    p {
+      color: black;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .success {
+      border-color: black;
+      color: black;
+    }
+
+    .success:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .btn {
+      background-color: white;
+      color: black;
+      padding: 5px 5px;
+      font-size: 16px;
+      cursor: pointer;
+      float: right;
+      margin-top: 15px;
+    }
+
+    .details {
+      padding: 20px 10px;
+    }
+
+    .details>h3 {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 18px;
+      margin: 10px 0 15px 0;
+    }
+
+    .details>p {
+      color: #a0a0a0;
+      font-size: 15px;
+      line-height: 30px;
+      font-weight: 400;
+    }
+
+
+<!----------CARD------------->
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .card-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 30px;
+    }
+
+    .card {
+      position: relative;
+      background: #fff;
+      max-width: 325px;
+      width: 325px;
+      height: auto;
+      margin: 25px;
+      box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .card-image {
+      max-height: 200px;
+    }
+
+    .card-image img {
+      /* max-width: 400px; */
+      height: 215px;
+      width: 100%;
+    }
+
+    .card-info {
+      position: relative;
+      color: #222;
+      padding: 10px 20px 20px;
+    }
+
+    .card-info h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .card-info p {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .pagination {
+      text-align: center;
+      margin: 30px 30px 60px;
+      user-select: none;
+    }
+
+    .pagination li {
+      display: inline-block;
+      margin: 5px;
+      box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+    }
+
+    .pagination li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      line-height: 45px;
+    }
+
+    .previous-page,
+    .next-page {
+      background: #112B3C;
+      width: 80px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .previous-page:hover {
+      transform: translateX(-5px);
+    }
+
+    .next-page:hover {
+      transform: translateX(5px);
+    }
+
+    .current-page,
+    .dots {
+      background: #ccc;
+      width: 45px;
+      /* border-radius: 50%; */
+      cursor: pointer;
+    }
+
+    .active {
+      background: #112B3C;
+    }
+
+    .disable {
+      background: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/hipop_t" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/chennuru-rahul-4a268919a/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.youtube.com/c/Freecodecamp" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+  <script async src="https://cse.google.com/cse.js?cx=67cd0a71b5232b3e7"></script>
+  <!-- <div class="topnav">
+    <a class="active" href="./index.html">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./Myskills.html">Skills</a> -->
+  <!-- <button class="btn success" onclick="myFunction()">Dark mode</button> -->
+  <!-- <div class="gcse-searchbox-only"></div>
+  </div> -->
+
+  <!-----------NAVBAR------------->
+  <script async src="https://cse.google.com/cse.js?cx=67cd0a71b5232b3e7"></script>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <!-- <a href="#news">News</a> -->
+    <div class="dropdown">
+      <button class="dropbtn">First Year
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="first-cse.html">CSE</a>
+        <a href="#">ECE</a>
+        <a href="#">IT</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Second Year
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="second-cse.html">CSE</a>
+        <a href="#">ECE</a>
+        <a href="#">IT</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Third Year
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="third-cse.html">CSE</a>
+        <a href="#">ECE</a>
+        <a href="#">IT</a>
+      </div>
+    </div>
+    <!-- <a href="./Myskills.html">Skills</a> -->
+    <a href="contact.html">Contact</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <div class="gcse-searchbox-only"></div>
+
+  </div>
+  <br>
+  <h1 class="main">SISTO</h1>
+  <h3 style="text-align: center; text-decoration: underline; text-transform: capitalize;">The learning hub</h3>
+  <!-- <a href="https://kvcreator.blogspot.com/2020/11/cse-cgpa.html?m=1"><img src="./sgpa.jpg" height="75px" width="300px" style="margin-left: 90px;"></a>  -->
+  <!-- <a href="./tb.html"><img src="./tb.jpg" style="margin-left: 90px;" height="75px" width="300px"></a>  -->
+  <!-- <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="ads2.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Advanced Data Structures</div>
+        <hr>
+        <p>Subject Code: SCSA-1304</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">Data Structures are used to store and manage data in an efficient and organised way for faster
+          and easy access and modification of Data. Some of the basic data structures are Arrays, LinkedList, Stacks,
+          Queues etc.</div>
+        <div class="btn1">
+          <a href="./short.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="dbms.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">DBMS</div>
+        <hr>
+        <p>Subject Code: SCSA-1301</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">A database management system (DBMS) is a software package designed to define, manipulate,
+          retrieve and manage data in a database. </div>
+        <div class="btn1">
+          <a href="dbms.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="java.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Programming in Java</div>
+        <hr>
+        <p>Subject Code: SITA-1301</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">Java has been one of the most popular programming language for many years.</div>
+        <div class="btn1">
+          <a href="java.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="SE.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Software Engineering</div>
+        <hr>
+        <p>Subject Code: SCSA-1303</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">Software engineering is an engineering branch associated with development of software product
+          using well-defined scientific principles, methods and procedures.</div>
+        <div class="btn1">
+          <a href="soft.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="dm.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Discrete Mathematics</div>
+        <hr>
+        <p>Subject Code: SMTA-1302</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          In recent decades, discrete mathematics has numerous applications in computer science, it is used in
+          programming languages, software development, cryptography, algorithms etc</div>
+        <div class="btn1">
+          <a href="disc.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="fds.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Fundamentals of digital systems</div>
+        <p>Subject Code: SCSA-1201</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">Combinational Networks. Ability to design, minimize, and analyze a combinational network.
+          Sequential Networks. Ability to design and analyze a sequential network.
+          Debug. ...
+          HDL Design. ...
+          Design Tools.</div>
+        <div class="btn1">
+          <a href="fds.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="c program.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">problem solving techniques with C&C++</div>
+        <p>Subject Code: SCSA1104</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Image result for problem solving techniques with C
+          The problem solving techniques involves the following steps  Define the problem. </div>
+        <div class="btn1">
+          <a href="c.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="pp.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Python Programming</div>
+        <p>Subject Code:SCSA1204</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Python is commonly used for developing websites and software, task automation, data analysis, and data
+          visualization.</div>
+        <div class="btn1">
+          <a href="py.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="ds.png">
+      </div>
+      <div class="top-next">
+        <div class="name">Data Structures</div>
+        <p>Subject Code: SCSA-1203</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">Data Structures are a specialized means of organizing and storing data in computers in such a
+          way that we can perform operations on the stored data more efficiently.</div>
+        <div class="btn1">
+          <a href="ds.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="toc.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Theory of Computation</div>
+        <p>Subject Code: SCSA-1302</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="toc.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="m1.jpg.png">
+      </div>
+      <div class="top-next">
+        <div class="name">M1</div>
+        <p>Subject Code:SMTA1201</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="m1.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="m2.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">M2</div>
+        <p>Subject Code:SMTA1201</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="m2.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="cg.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Computer graphics</div>
+        <p>Subject Code: SCSA-1302</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="cg.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="cn.png">
+      </div>
+      <div class="top-next">
+        <div class="name">Computer Networks</div>
+        <p>Subject Code:SMTA1201</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="cn.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="micro.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Microprocessor and microcontroller based systems</div>
+        <p>Subject Code:SMTA1201</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="mpmc.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="fog.png">
+      </div>
+      <div class="top-next">
+        <div class="name">Fog & cloud computing</div>
+        <p>Subject Code: SCSA-1302</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="f&c.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="os.jpeg">
+      </div>
+      <div class="top-next">
+        <div class="name">Operating systems</div>
+        <p>Subject Code:SMTA1201</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="os.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="Technical-English.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Technical-English</div>
+        <p>Subject Code: </p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="eng.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="ec.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Engineering chemistry</div>
+        <p>Subject Code: SCSA-1302</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="ec.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="eee.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Operating systems</div>
+        <p>Subject Code:SMTA1201</p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="eee.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img src="Technical-English.jpg">
+      </div>
+      <div class="top-next">
+        <div class="name">Technical-English</div>
+        <p>Subject Code: </p>
+      </div>
+      <div class="bottom-text">
+        <div class="text">
+          Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+          using algorithms and how efficiently they can be solved. ...</div>
+        <div class="btn1">
+          <a href="eng.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- <div class="cards">
+          <a href="#"><div class="card card1">
+              <div class="container">
+                  <img src="cg.jpg" alt="las vegas">
+              </div>
+              <div class="details">                                                                                                                               
+                  <h3>Computer Networks</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
+              </div>
+          </div></a>
+          <div class="card card2">
+              <div class="container">
+                  <img src="cg.jpg" alt="New York">
+              </div>
+              <div class="details">
+                  <h3>New York</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
+              </div>
+          </div>
+          <div class="card card3">
+              <div class="container">
+                  <img src="cg.jpg" alt="Singapore">
+              </div>
+              <div class="details">
+                  <h3>Singapore</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
+              </div>
+          </div>
+      </div>
+
+      <br>
+      <hr>
+      <div class="cards">
+        <a href="#"><div class="card card1">
+            <div class="container">
+                <img src="cg.jpg" alt="las vegas">0oi9c55555551
+            </div>
+            <div class="details">
+                <h3>Computer Networks</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
+            </div>
+        </div></a>
+        <div class="card card2">
+            <div class="container">
+                <img src="cg.jpg" alt="New York">
+            </div>
+            <div class="details">
+                <h3>New York</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="container">
+                <img src="cg.jpg" alt="Singapore">
+            </div>
+            <div class="details">
+                <h3>Singapore</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+  <!- <div class="row">
+    <div class="col">
+      <a href="py.html">
+        <div class="card">
+          <img src="pp.jpg" style="height: 200px; width: 330px;">
+          <a href="#">
+            <h3>Python with PST</h3>
+          </a>
+          <h4>Subject code: </h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+            eius hic obcaecati libero velit?</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col">
+      <a href="m1.html">
+      <div class="card">
+        <img src="m1.jpg" style="height: 200px; width: 320px;">
+        <h3>M1</h3>
+        <h4>Subject code: </h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+      </a>
+    </div>
+
+    <div class="col">
+      <a href="eng.html">
+      <div class="card">
+        <img src="Technical-English.jpg" style="height: 200px; width: 330px;">
+        <h3>Technical-English</h3>
+        <h4>Subject code: </h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+      </a>
+    </div>
+
+    <div class="col">
+      <a href="eee.html">
+      <div class="card">
+        <img src="eee.jpg" style="height: 200px; width: 310px;">
+        <h3>EEE</h3>
+        <h4>Subject code: </h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+      </a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <img src="toc.jpg" style="height: 250px; width: 330px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="dbms.jpg" style="height: 250px; width: 255px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="dm.jpg" style="height: auto; width: 330px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="ds.png" style="height: 250px; width: 330px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <img src="ec.jpg" style="height: 260px; width: 330px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="SE.jpg" style="height: auto; width: 330px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="SE.jpg" style="height: auto; width: 330px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="toc.jpg" style="height: auto; width: 330px;">
+        <h3>hello guys</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque cum nemo
+          eius hic obcaecati libero velit?</p>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <div class="card-content" style="display: none">
+      <div class="card">
+        <a href="short.html">
+          <div class="card-image"><img src="ads2.jpg" alt="" ></div>
+        </a>
+        <div class="card-info">
+          <h3>Advanced Data Structures</h3>
+          <p>Data Structures are used to store and manage data in an efficient and organised way for faster
+            and easy access and modification of Data.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="py.html"><div class="card-image"><img src="pp.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Python Programming</h3>
+          <p>Python is commonly used for developing websites and software, task automation, data analysis, and data
+            visualization.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="m1.html"><div class="card-image"><img src="m1.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>M1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="eng.html"><div class="card-image"><img src="Technical-English.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Technical-English</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="eee.html"><div class="card-image"><img src="eee.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>EEE</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="ds.html"><div class="card-image"><img src="ds.png" alt=""></div></a>
+        <div class="card-info">
+          <h3>Data Structures</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="dbms.html"><div class="card-image"><img src="dbms.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>DBMS</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="disc.html"><div class="card-image"><img src="dm.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Discrete Mathematics</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="fds.html"><div class="card-image"><img src="fds.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Fundamentals of digital systems</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="m2.html"><div class="card-image"><img src="m2.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>M2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="c.html"><div class="card-image"><img src="c program.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Programming with c/c++</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="java.html"><div class="card-image"><img src="java.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>programming in Java</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="soft.html"><div class="card-image"><img src="SE.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Software Engineering</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="toc.html"><div class="card-image"><img src="toc.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Theory of Computation</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="mpmc.html"><div class="card-image"><img src="micro.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>MPMC</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="cn.html"><div class="card-image"><img src="cn.png" alt=""></div></a>
+        <div class="card-info">
+          <h3>Computer Networks</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="cg.html"><div class="card-image"><img src="cg.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Computer Graphics</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="f&c.html"><div class="card-image"><img src="fog.png" alt=""></div></a>
+        <div class="card-info">
+          <h3>Fog & Cloud computing</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="os.html"><div class="card-image"><img src="os.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Operating systems</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="ec.html"><div class="card-image"><img src="ec.jpg" alt=""></div></a>
+        <div class="card-info">
+          <h3>Engineering Chemistry</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="pagination">
+        <!--<li class="page-item previous-page disable"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item current-page active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+        <li class="page-item current-page"><a class="page-link" href="#">5</a></li>
+        <li class="page-item current-page"><a class="page-link" href="#">6</a></li>
+        <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+        <li class="page-item current-page"><a class="page-link" href="#">10</a></li>
+        <li class="page-item next-page"><a class="page-link" href="#">Next</a></li>-->
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!----------------------Javascript--------------------------------->
+
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Up!</button>
+  <script>
+    var mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+<script>
+  function getPageList(totalPages, page, maxLength) {
+    function range(start, end) {
+      return Array.from(Array(end - start + 1), (_, i) => i + start);
+    }
+
+    var sideWidth = maxLength < 9 ? 1 : 2;
+    var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+    var rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+
+    if (totalPages <= maxLength) {
+      return range(1, totalPages);
+    }
+
+    if (page <= maxLength - sideWidth - 1 - rightWidth) {
+      return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+    }
+
+    if (page >= totalPages - sideWidth - 1 - rightWidth) {
+      return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+    }
+
+    return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+  }
+
+  $(function () {
+    var numberOfItems = $(".card-content .card").length;
+    var limitPerPage = 6; //How many card items visible per a page
+    var totalPages = Math.ceil(numberOfItems / limitPerPage);
+    var paginationSize = 4; //How many page elements visible in the pagination
+    var currentPage;
+
+    function showPage(whichPage) {
+      if (whichPage < 1 || whichPage > totalPages) return false;
+
+      currentPage = whichPage;
+
+      $(".card-content .card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+
+      $(".pagination li").slice(1, -1).remove();
+
+      getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+        $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots")
+          .toggleClass("active", item === currentPage).append($("<a>").addClass("page-link")
+            .attr({ href: "javascript:void(0)" }).text(item || "...")).insertBefore(".next-page");
+      });
+
+      $(".previous-page").toggleClass("disable", currentPage === 1);
+      $(".next-page").toggleClass("disable", currentPage === totalPages);
+      return true;
+    }
+
+    $(".pagination").append(
+      $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("Prev")),
+      $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("Next"))
+    );
+
+    $(".card-content").show();
+    showPage(1);
+
+    $(document).on("click", ".pagination li.current-page:not(.active)", function () {
+      return showPage(+$(this).text());
+    });
+
+    $(".next-page").on("click", function () {
+      return showPage(currentPage + 1);
+    });
+
+    $(".previous-page").on("click", function () {
+      return showPage(currentPage - 1);
+    });
+  });
+</script>
+
+
+<!-------------------FOOTER SECTION------------------------>
+  <footer>
+    <div class="footer-content">
+      <h3>SISTO</h3>
+      <p1><strong>Sisto</strong> is about who are seek to learn & download the courses provided by University it was
+        developed for students by <strong>CSE.dept students</strong></p1>
+      <ul1 class="socials">
+        <li><a href="https://twitter.com/hipop_t"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/chennuru-rahul-4a268919a/"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://www.youtube.com/c/Freecodecamp"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      </ul1>
+    </div>
+    <div class="footer-bottom">
+      &copy; <a href="index.html" style="text-decoration: none; color: white;"><strong>Sisto</strong></a> 2022 All
+      rights reserved
+    </div>
+  </footer>
+</body>
+</html>

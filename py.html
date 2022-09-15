@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python programming</title>
+  <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      font-size: 20px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: green;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: #ccc;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .panel,
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 17px;
+    }
+
+    ul.breadcrumb {
+      padding: 10px 16px;
+      list-style: none;
+      background-color: #eee;
+      font-family: sans-serif;
+    }
+
+    ul.breadcrumb li {
+      display: inline;
+      font-size: 18px;
+    }
+
+    ul.breadcrumb li+li:before {
+      padding: 8px;
+      color: black;
+      content: "/\00a0";
+    }
+
+    ul.breadcrumb li a {
+      color: black;
+      text-decoration: none;
+    }
+
+    ul.breadcrumb li a:hover {
+      color: green;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#">Python programming</a></li>
+  </ul>
+
+  <button class="accordion">Unit-1</button>
+  <div class="panel">
+    <a href="./DATA/PYTHON PROGRAMMING/UNIT-1/Unit 01.pptx">Unit-1_ppt</a>
+  </div>
+  <button class="accordion">Unit-2</button>
+  <div class="panel">
+    <a href="DATA/PYTHON PROGRAMMING/UNIT-2/Unit 02.pptx">Unit-2_ppt</a>
+  </div>
+  <button class="accordion">Unit-3</button>
+  <div class="panel">
+    <a href="DATA/PYTHON PROGRAMMING/UNIT-3/Unit 03.pptx">Unit-3_ppt</a>
+  </div>
+  <button class="accordion">Unit-4</button>
+  <div class="panel">
+    <a href="DATA/PYTHON PROGRAMMING/UNIT-4/Unit 04.pptx">Unit-4_ppt</a>
+  </div>
+  <button class="accordion">Unit-5</button>
+  <div class="panel">
+    <a href="DATA/PYTHON PROGRAMMING/UNIT-5/Unit 05.pptx">Unit-5_ppt</a>
+  </div>
+
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

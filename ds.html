@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data structures</title>
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color:goldenrod;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color:#ccc;
+  overflow: hidden;
+  text-align: center;
+}
+.panel,a{
+text-decoration: none;
+color: black;
+font-size: 17px;
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: darkgoldenrod;
+  text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Data Structures</a></li>
+        <li><a href="DATA/DATA STRUCTURES/SCSA1203-Data Structures Syllabus.pdf">Syllabus</a></li>
+
+      </ul>
+
+      <button class="accordion">Unit-1</button>
+      <div class="panel">
+      <a href="./DATA/DATA STRUCTURES/UNIT-1/unit-I.pdf">Unit-1_pdf</a>
+      </div>
+      <button class="accordion">Unit-2</button>
+      <div class="panel">
+      <a href="DATA/DATA STRUCTURES/UNIT-2/UNIT II.pdf">Unit-2_pdf</a>
+      </div>
+      <button class="accordion">Unit-3</button>
+      <div class="panel">
+      <a href="DATA/DATA STRUCTURES/UNIT-3/Unit-III.pdf">Unit-3_pdf</a>
+      <hr>
+      <a href="DATA/DATA STRUCTURES/UNIT-3/unit-3-Stack.pdf">unit-3_stack</a>
+      </div>
+      <button class="accordion">Unit-4</button>
+      <div class="panel">
+      <a href="DATA/DATA STRUCTURES/UNIT-4/Unit-IV.docx">Unit-4_docx</a>
+      <hr>
+      <a href="DATA/DATA STRUCTURES/UNIT-4/Unit IV Queue.pptx">Unit-4_queue</a>
+      </div>
+      <button class="accordion">Unit-5</button>
+      <div class="panel">
+      <a href="DATA/DATA STRUCTURES/UNIT-5/Unit-V.pdf">Unit-5_pdf</a>
+      </div>
+
+
+      <script>
+           var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+      </script>
+</body>
+</html>

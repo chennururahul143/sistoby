@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd year-CSE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            padding: 20px;
+            grid-gap: 20px;
+        }
+
+        .card {
+            background-color: #1c1b29;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .container {
+            position: relative;
+            /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            /* border-radius: 20px 20px 0 0; */
+        }
+
+
+
+        .col {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        .card {
+            background-color: whitesmoke;
+            text-align: center;
+            padding: 20px 15px;
+            color: black;
+            border: 4px solid black;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10px;
+            padding: 10px 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .col {
+                width: 100%;
+                display: flex;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* img {
+            height: 100%;
+            width: 100%;
+        } */
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" style="font-size: 20px; background-color: black; color: white; padding: 10px 30px;">Home</a>
+    <!-- <a href="second-cse.html" style="text-align: right;"><h2>2nd year</h2></a> -->
+    <br>
+    <br>
+    <h1 style="text-align: center; color: red; border: 4px double black; border-radius: 10px;">3rd Year-subjects</h1>
+    <br>
+    <div class="row">
+        <div class="col">
+            <a href="os.html">
+                <div class="card">
+                    <img src="os.jpg" style="height: 200px; width: 100%;">
+                    <a href="#">
+                        <h3>Operating Systems</h3>
+                    </a>
+                    <h4>Subject code: </h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                        cumque cum nemo
+                        eius hic obcaecati libero velit?</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="cn.html">
+                <div class="card">
+                    <img src="cn.png" style="height: 200px; width: 100%;">
+                    <h3>Computer Networks</h3>
+                    <h4>Subject code: </h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                        cumque cum nemo
+                        eius hic obcaecati libero velit?</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="cg.html">
+                <div class="card">
+                    <img src="cg.jpg" style="height: 200px; width: 100%;">
+                    <h3>Computer Graphics</h3>
+                    <h4>Subject code: </h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                        cumque cum nemo
+                        eius hic obcaecati libero velit?</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="f&c.html">
+                <div class="card">
+                    <img src="fog.png" style="height: 200px; width: 100%;">
+                    <h3>Fog & Cloud Computing</h3>
+                    <h4>Subject code: </h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                        cumque cum nemo
+                        eius hic obcaecati libero velit?</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <a href="ml.html">
+            <div class="card">
+                <img src="ml.jpeg" style="height: 220px; width: 100%;">
+                <h3>Machine learning</h3>
+                <h4>Subject code: </h4>
+                <p>Data Structures are a specialized means of organizing and storing data in computers in such a
+                    way that we can perform operations on the stored data more efficiently.</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="ns.html">
+            <div class="card">
+                <img src="ns.jpg" style="height: 220px; width: 100%;">
+                <h3>Network Security</h3>
+                <h4>Subject code: </h4>
+                <p>Combinational Networks. Ability to design, minimize, and analyze a combinational network.
+                    Sequential Networks. Ability to design and analyze a sequential network.</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="bdata.html">
+            <div class="card">
+                <img src="bd.jpg" style="height: 220px; width: 100%;">
+                <h3>Bigdata Analytics</h3>
+                <h4>Subject code: </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </a>
+        </div>
+
+        <div class="col">
+            <a href="cd.html">
+            <div class="card">
+                <img src="cd.jpg" style="height: 220px; width: 100%;">
+                <h3>Compiler Design</h3>
+                <h4>Subject code: </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- <br>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img src="ec.jpg" style="height: 260px; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="SE.jpg" style="height: 250px; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="SE.jpg" style="height: auto; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="toc.jpg" style="height: 250px; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>

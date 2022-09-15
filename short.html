@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advanced data structures</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 20px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 0px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+#customers {
+		  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		
+		#customers td, #customers th {
+		  border: 1px solid #ddd;
+		  padding: 8px;
+		}
+		
+		#customers tr:nth-child(even){background-color: #f2f2f2;}
+		
+		#customers tr:hover {background-color: #ddd;}
+		
+		#customers th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align:left;
+		  background-color: #4CAF50;
+		  color: white;
+		}
+        a{
+        text-decoration: none;
+        }
+        ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  font-family: sans-serif;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 17px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: grey;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+        </style>
+</head>
+<body>
+  <ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#">Advanced data structures</a></li>
+    <li><a href="ylectures-ads.html">Youtube-lectures</a></li>
+  </ul>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Unit-1</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">unit-2</button>
+  <button class="tablinks" onclick="openCity(event, 'africa')">unit-3</button>
+  <button class="tablinks" onclick="openCity(event, 'america')">unit-4</button>
+  <button class="tablinks" onclick="openCity(event, 'australia')">unit-5</button>
+
+</div>
+
+<div id="London" class="tabcontent">
+<table id="customers">
+		<tr>
+		  <th style="text-align: center">Unit-1</th>
+		</tr>
+		<tr>
+		  <td><a href="./DATA/ADS/UNIT-1/Binary trees in detail.ppt">Binary trees ppt</a></td>
+         <tr>
+          <td><a href="./DATA/ADS/UNIT-1/ADS UNIT 1 Hnd written notes.doc">unit-1 word</a></td>
+        </tr>
+    <tr>
+      <td><a href="./DATA/ADS/UNIT-1/tress properties.ppt">Trees properties</a></td>
+</tr>
+<tr>
+  <td><a href="./DATA/ADS/UNIT-1/Unit_I.ppt">unit-1 ppt</a></td>
+</tr>
+<tr>
+  <td><a href="./DATA/ADS/UNIT-1/SCSA1304_Syllabus.pdf">Syllabus</a></td>
+</tr>
+ </table>
+</div>
+
+<div id="Paris" class="tabcontent">
+<table id="customers">
+		<tr>
+		  <th style="text-align: center">Unit-2</th>
+		</tr>
+		<tr>
+		  <td><a href="DATA/ADS/UNIT-2/Unit 2.pptx">unit-2 ppt</a></td>
+         <tr>
+          <td><a href="DATA/ADS/UNIT-2/heap trees.pdf">Heap tress_detail</a></td>
+        </tr>
+        <tr>
+          <td><a href="DATA/ADS/UNIT-2/SplayTrees.ppt">Splay tress_detail</a></td>
+		</tr>
+    <tr>
+      <td><a href="DATA/ADS/UNIT-2/Threaded Binary Tree.pptx">Threaded binary tree_ppt</a></td>
+</tr>
+<tr>
+  <td><a href="DATA/ADS/UNIT-2/UNIT 2.pdf">Unit-2_pdf</a></td>
+</tr>
+ </table>
+</div>
+<div id="africa" class="tabcontent">
+  <table id="customers">
+		<tr>
+		  <th style="text-align: center">Unit-3</th>
+		</tr>
+		<tr>
+		  <td><a href="./DATA/ADS/UNIT-3/unit 3.pdf">unit-3_pdf</a></td>
+         <tr>
+          <td><a href="./DATA/ADS/UNIT-3/UNIT_3_ADS.pptx">unit-3_ppt</a></td>
+        </tr>
+ </table>
+</div>
+<div id="america" class="tabcontent">
+  <table id="customers">
+		<tr>
+		  <th style="text-align: center">Unit-4</th>
+		</tr>
+		<tr>
+		  <td><a href="./DATA/ADS/UNIT-4/ALGORITHMS.pptx">ALGORITHMS_ppt</a></td>
+         <tr>
+          <td><a href="./DATA/ADS/UNIT-4/unit 4.pdf">unit-4_pdf</a></td>
+        </tr>
+        <tr>
+          <td><a href="./DATA/ADS/UNIT-4/UNIT_4_ADS.pptx">unit-4_ppt</a></td>
+		</tr>
+ </table>
+</div>
+<div id="australia" class="tabcontent">
+  <table id="customers">
+		<tr>
+		  <th style="text-align: center">Unit-5</th>
+		</tr>
+		<tr>
+		  <td><a href="./DATA/ADS/UNIT-5/revision quiz.pptx">Quiz part</a></td>
+         <tr>
+          <td><a href="./DATA/ADS/UNIT-5/unit 5.pdf">unit-5_pdf</a></td>
+        </tr>
+        <tr>
+          <td><a href="./DATA/ADS/UNIT-5/Unit V.pptx">unit-5_ppt</a></td>
+		</tr>
+ </table>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd-year CSE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            padding: 20px;
+            grid-gap: 20px;
+        }
+
+        .card {
+            background-color: #1c1b29;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .container {
+            position: relative;
+            /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            /* border-radius: 20px 20px 0 0; */
+        }
+
+
+
+        .col {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        .card {
+            background-color: whitesmoke;
+            text-align: center;
+            padding: 20px 15px;
+            color: black;
+            border: 4px solid black;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10px;
+            padding: 10px 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .col {
+                width: 100%;
+                display: flex;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* img {
+            height: 100%;
+            width: 100%;
+        } */
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+   <!-- <a href="first-cse.html"><h2><-- 1st year</h2></a> -->
+   <a href="index.html" style="font-size: 20px; background-color: black; color: white; padding: 8px 16px;">Home</a>
+   <br>
+    <h1 style="text-align: center; color: red; border: 4px solid black; border-radius: 10px;">2nd Year-subjects</h1>
+    <br>
+    <div class="row">
+        <div class="col">
+            <a href="short.html">
+                <div class="card">
+                    <img src="ads2.jpg" style="height: 180px; width: 100%;">
+                        <h3>Advanced Data Structures</h3>
+                    <h4>Subject code: SCSA-1304</h4>
+                    <p>Data Structures are used to store and manage data in an efficient and organised way for faster
+                        and easy access and modification of Data. Some of the basic data structures are Arrays, LinkedList, Stacks,
+                        Queues etc.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="dbms.html">
+                <div class="card">
+                    <img src="dbms.jpg" style="height: 200px; width: 100%;">
+                    <h3>DBMS</h3>
+                    <h4>Subject code: SCSA-1301</h4>
+                    <p>A database management system (DBMS) is a software package designed to define, manipulate,
+                        retrieve and manage data in a database.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="disc.html">
+                <div class="card">
+                    <img src="dm.jpg" style="height: 180px; width: 100%;">
+                    <h3>Discrete Mathematics</h3>
+                    <h4>Subject code: SMTA-1302</h4>
+                    <p>In recent decades, discrete mathematics has numerous applications in computer science, it is used in
+                        programming languages, software development, cryptography, algorithms etc</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="java.html">
+                <div class="card">
+                    <img src="java.jpg" style="height: 220px; width: 100%;">
+                    <h3>Programming in java</h3>
+                    <h4>Subject code: SITA-1301</h4>
+                    <p>Java has been one of the most popular programming language for many years.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <a href="soft.html">
+            <div class="card">
+                <img src="SE.jpg" style="height: 220px; width: 100%;">
+                <h3>Software Engineering</h3>
+                <h4>Subject code: SCSA-1303</h4>
+                <p>Software engineering is an engineering branch associated with development of software product
+                    using well-defined scientific principles, methods and procedures.</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="toc.html">
+            <div class="card">
+                <img src="toc.jpg" style="height: 210px; width: 100%;">
+                <h3>Theory of Computation</h3>
+                <h4>Subject code: SCSA-1302</h4>
+                <p>Theory of computation (TOC) is a branch of Computer Science that is concerned with how problems can be solved
+                    using algorithms and how efficiently they can be solved. ...</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="mpmc.html">
+            <div class="card">
+                <img src="micro.jpg" style="height: 220px; width: 100%;">
+                <h3>MPMC</h3>
+                <h4>Subject code: </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </a>
+        </div>
+    </div>
+
+    <!-- <br>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img src="ec.jpg" style="height: 260px; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="SE.jpg" style="height: 250px; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="SE.jpg" style="height: auto; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="toc.jpg" style="height: 250px; width: 330px;">
+                <h3>hello guys</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>

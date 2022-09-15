@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    body{
+        background-color: #333;
+    }
+    .inner{
+        padding-top: 20px;
+    }
+    .header{
+        text-align: center;
+        color: #fff;
+        padding:1rem;
+        position: relative;
+    }
+    .header:after{
+        content: '';
+        position: relative;
+        bottom: 0;
+        left: 30%;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 100px;
+        background-color: #2ecc71;
+        border-radius: 2px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        text-align: center;
+        grid-gap:1rem;
+        padding: 1rem 80px;
+        font-size: 1.2rem;
+    }
+    .skill-box{
+        padding: 1rem;
+        color: #ddd;
+        cursor: pointer;
+    }
+    .skill-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+    }
+    .skill-icon{
+        width: 50px;
+        z-index: 2;
+    }
+    .skill-title h3{
+        color: #fff;
+        margin: 0.5rem;
+    }
+    .img{
+        width: 90px;
+        height: 90px;
+        position: relative;
+        border-radius: 45px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+    }
+    .img:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 90px;
+        background: rgba(100,100,100,0.5);
+        border-radius: 45px 0 0 45px;
+    }
+    .skill-title:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        width: 0;
+        height: 4px;
+        border-radius: 2px 0 0 2px;
+        background-color: #2ecc71;
+        transition: .5s;
+    }
+    .skill-title:before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 4px;
+        border-radius: 0 2px 2px 0;
+        background-color: #2ecc71;
+        transition: .5s;
+    }
+    .skill-box:hover> .skill-title:after,.skill-box:hover> .skill-title:before{
+        width: 35px;
+    }
+    .skill-box:hover .img{
+        transform: translateY(-10px);
+    }
+    @media screen & (max-width:990px){
+        .container{
+            grid-template-column:repeat(2,1fr);
+            padding: 2rem 50px;
+        }
+    }
+    @media screen & (max-width:650px){
+        .container{
+            grid-template-column:1fr;
+            padding:2rem 50px;
+        }
+    }
+    ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  font-family: 'Courier New', Courier, monospace
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+</style>
+<body>
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    <div class="inner">
+        <div class="header">
+            <h1>My Skills</h1>
+        </div>
+        <div class="container">
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                    <img src="html.jpg" class="skill-icon">
+                    </div>
+                    <h3>HTML5</h3>
+                </div>
+                <p>HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                    <img src="css.jpg" class="skill-icon">
+                    </div>
+                    <h3>CSS3</h3>
+                </div>
+                <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                    <img src="script.jpg" class="skill-icon">
+                    </div>
+                    <h3>Javascript</h3>
+                </div>
+                <p>JavaScript often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior,often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

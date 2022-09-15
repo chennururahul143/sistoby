@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            padding: 20px;
+            grid-gap: 20px;
+        }
+
+        .card {
+            background-color: #1c1b29;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .container {
+            position: relative;
+            /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            /* border-radius: 20px 20px 0 0; */
+        }
+
+
+
+        .col {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+            
+        }
+
+        .card {
+            background-color: whitesmoke;
+            text-align: center;
+            padding: 20px 15px;
+            color: black;
+            border: 4px double black;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 10px;
+            padding: 10px 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .col {
+                width: 100%;
+                display: flex;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* img {
+            height: 100%;
+            width: 100%;
+        } */
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" style="font-size: 20px; background-color: black; color: white; padding: 10px 30px;">Home</a>
+    <br>
+    <br>
+    <div class="container">
+        <div class="input-filter">
+            <input type="text" name="" id="filter" class="filter" placeholder="Search Course here.." onkeyup="searchProduct()">
+        </div>
+    </div>
+    <br>
+    <h1 style="text-align: center; color: red; border: 4px double black; border-radius: 10px;">1st Year-subjects</h1>
+    <!-- <div class="cards">
+        <a href="#">
+            <div class="card card1">
+                <div class="container">
+                    <img src="cg.jpg" alt="las vegas">
+                </div>
+                <div class="details">
+                    <h3>Computer Networks</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam
+                        adipisci exercitationem.</p>
+                </div>
+            </div>
+        </a>
+        <div class="card card2">
+            <div class="container">
+                <img src="cg.jpg" alt="New York">
+            </div>
+            <div class="details">
+                <h3>New York</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam
+                    adipisci exercitationem.</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="container">
+                <img src="cg.jpg" alt="Singapore">
+            </div>
+            <div class="details">
+                <h3>Singapore</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam
+                    adipisci exercitationem.</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <br>
+    <hr>
+    <div class="cards">
+        <a href="#">
+            <div class="card card1">
+                <div class="container">
+                    <img src="cg.jpg" alt="las vegas">0oi9c55555551
+                </div>
+                <div class="details">
+                    <h3>Computer Networks</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam
+                        adipisci exercitationem.</p>
+                </div>
+            </div>
+        </a>
+        <div class="card card2">
+            <div class="container">
+                <img src="cg.jpg" alt="New York">
+            </div>
+            <div class="details">
+                <h3>New York</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam
+                    adipisci exercitationem.</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="container">
+                <img src="cg.jpg" alt="Singapore">
+            </div>
+            <div class="details">
+                <h3>Singapore</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam
+                    adipisci exercitationem.</p>
+            </div>
+        </div>
+    </div> -->
+
+
+    <br>
+    <div class="row" id="card-lists">
+        <div class="col">
+            <a href="py.html">
+                <div class="card">
+                    <img src="pp.jpg" style="height: 210px;">
+                    <div class="card-body">
+                        <a href="#">
+                            <h3 class="card-title">Python with PST</h3>
+                        </a>
+                        <h4>Subject code: </h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                            cumque cum nemo
+                            eius hic obcaecati libero velit?</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="m1.html">
+                <div class="card">
+                    <img src="m1.jpg" style="height: 210px;">
+                    <div class="card-body">
+                        <h3 class="card-title">M1</h3>
+                    <h4>Subject code: </h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                        cumque cum nemo
+                        eius hic obcaecati libero velit?</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="eng.html">
+                <div class="card">
+                    <img src="Technical-English.jpg" style="height: 210px; ">
+                    <div class="card-body">
+                        <h3 class="card-title">Technical-English</h3>
+                    <h4>Subject code: </h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                        cumque cum nemo
+                        eius hic obcaecati libero velit?</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="eee.html">
+                <div class="card">
+                    <img src="eee.jpg" style="height: 210px;">
+                    <div class="card-body">
+                        <h3 class="card-title">EEE</h3>
+                    <h4>Subject code: </h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi
+                        cumque cum nemo
+                        eius hic obcaecati libero velit?</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <br>
+    <div class="row" id="card-lists">
+        <div class="col">
+            <a href="ds.html">
+            <div class="card">
+                <img src="ds.png" style="height: 220px;">
+                <div class="card-body">
+                    <h3 class="card-title">Data structures</h3>
+                <h4>Subject code: </h4>
+                <p>Data Structures are a specialized means of organizing and storing data in computers in such a
+                    way that we can perform operations on the stored data more efficiently.</p>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="fds.html">
+            <div class="card">
+                <img src="fds.jpg" style="height: 220px; ">
+                <div class="card-body">
+                    <h3 class="card-title">Fundamentals of digital systems</h3>
+                <h4>Subject code: </h4>
+                <p>Combinational Networks. Ability to design, minimize, and analyze a combinational network.
+                    Sequential Networks. Ability to design and analyze a sequential network.</p>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="m2.html">
+            <div class="card">
+                <img src="m2.jpg" style="height: 220px;">
+                <div class="card-body">
+                    <h3 class="card-title">M2</h3>
+                <h4>Subject code: </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col">
+            <a href="c.html">
+            <div class="card">
+                <img src="c program.jpg" style="height: 220px;">
+                <div class="card-body">
+                    <h3 class="card-title">Problem solving with c/c++</h3>
+                <h4>Subject code: </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="row" id="card-lists">
+        <div class="col">
+            <a href="ec.html">
+            <div class="card">
+                <img src="ec.jpg" style="height: 220px;">
+                <div class="card-body">
+                    <h3 class="card-title">Engineering Chemistry</h3>
+                <h4>Subject code: </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="phy.html">
+            <div class="card">
+                <img src="phy.jpg" style="height: 220px;">
+                <div class="card-body">
+                    <h3 class="card-title">Physics for Information Sciences</h3>
+                <h4>Subject code: </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate officia, animi cumque
+                    cum nemo
+                    eius hic obcaecati libero velit?</p>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function searchProduct(){
+            const input = document.getElementById('filter').value.toUpperCase();
+            const cardContainer = document.getElementById('card-lists');
+            console.log(cardContainer);
+
+            const cards = cardContainer.getElementsByClassName('card');
+            console.log(cards);
+
+            for(let i = 0; i < cards.length; i++) {
+                let title = cards[i].querySelector(".card-body h3.card-title");
+                console.log(title);
+
+                if(title.innerText.toUpperCase().indexOf(input) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Database management systems</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+ body {
+      
+      font-family: Arial;
+      
+      }
+      
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+      
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+      
+      .tab button:hover {
+        background-color: #ddd;
+      }
+      
+      .tab button.active {
+        background-color: #ccc;
+      }
+      
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      } 
+  </style>
+</head>
+<body>
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Quick Links</h3>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./DATA/DBMS/SCSA1301_DBMS SYLLABUS.pdf">Syllabus</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h3>Database managemant systems</h3>
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">Unit-1</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Unit-2</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Unit-3</button>
+        <button class="tablinks" onclick="openCity(event, 'America')">Unit-4</button>
+        <button class="tablinks" onclick="openCity(event, 'Australia')">Unit-5</button>
+      </div>
+      
+      <div id="London" class="tabcontent">
+        <a href="./DATA/DBMS/UNIT-1/Introduction to Databases.doc">Introduction to databases</a><br>
+        <hr>
+        <a href="./DATA/DBMS/UNIT-1/UNIT 1.pptx">Unit-1_ppt</a><br>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <a href="./DATA/DBMS/UNIT-2/unit 2 dbms ppt.pptx">Unit-2_ppt</a>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <a href="./DATA/DBMS/UNIT-3/DBMS-UNIT-3.pptx">Unit-3_ppt</a>
+      </div>
+      <div id="America" class="tabcontent">
+        <a href="./DATA/DBMS/UNIT-4/DATA BASE RECOVERY.pptx">Recovery_ppt</a><br>
+        <hr>
+        <a href="./DATA/DBMS/UNIT-4/DATA BASE SECURITY.pptx">Security_ppt</a><br>
+        <hr>
+        <a href="./DATA/DBMS/UNIT-4/DBMS-UNIT-IV - UPDATED.pptx">Unit-4_ppt</a>
+      </div>
+      <div id="Australia" class="tabcontent">
+       <a href="./DATA/DBMS/UNIT-5/UPDATED DBMS-UNIT-V.pptx">Unit-5_ppt</a>
+      </div>
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script> 
+  </div>
+</div>
+<br>
+<div class="jumbotron text-center" style="padding: 25px 25px;">
+  <p>That's it!!</p>
+</div>
+</body>
+</html>
